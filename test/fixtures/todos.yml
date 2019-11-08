@@ -11,3 +11,7 @@ two:
 todo:
   title: sample
   body: Todo Body
+
+empty_title:
+  title: ''
+  body: Todo Body

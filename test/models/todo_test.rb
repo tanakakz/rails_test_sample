@@ -7,7 +7,7 @@ class TodoTest < ActiveSupport::TestCase
   end
 
   test "display title with empty title" do
-    todo = Todo.create(title: '', body: 'test')
+    todo = todos(:empty_title)
     assert_empty(todo.display_title)
   end
 end
