@@ -1,5 +1,5 @@
 class Todo < ApplicationRecord
   def display_title
-    "<#{ title }>"
+    title.empty? ? "" : "<#{ title }>"
   end
 end
