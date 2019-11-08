@@ -3,11 +3,6 @@ require 'test_helper'
 class TodosControllerTest < ActionDispatch::IntegrationTest
   setup do
     @todo = todos(:one)
-    puts "call setup"
-  end
-
-  teardown do
-    puts "call teardown"
   end
 
   test "should get index" do
