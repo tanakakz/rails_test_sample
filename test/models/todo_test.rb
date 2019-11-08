@@ -1,28 +1,8 @@
 require 'test_helper'
 
 class TodoTest < ActiveSupport::TestCase
-  test "the truth" do
-    assert true
+  test "display title" do
+    todo = Todo.create(title: 'sample', body: 'test')
+    assert(todo.display_title == '<sample>')
   end
-
-  test "sleep 1" do
-    sleep 3
-    assert true
-  end
-
-  test "sleep 2" do
-    sleep 3
-    assert true
-  end
-
-  test "sleep 3" do
-    sleep 3
-    assert true
-  end
-
-  test "sleep 4" do
-    sleep 3
-    assert true
-  end
-
 end
