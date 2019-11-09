@@ -14,12 +14,13 @@ class TodosTest < ApplicationSystemTestCase
     visit todos_url
     click_on "New Todo"
 
-    fill_in "Body", with: @todo.body
+    fill_in "Body", with: "create body"
     fill_in "Title", with: @todo.title
     click_on "Create Todo"
 
     assert_text "Todo was successfully created"
     click_on "Back"
+    assert_selector "body>table>tbody>tr:last-child>td:nth-child(2)", text: "create body"
   end
 
   test "updating a Todo" do
